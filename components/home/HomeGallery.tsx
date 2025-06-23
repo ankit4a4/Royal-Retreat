@@ -1,10 +1,11 @@
 'use client';
 
-import Slider from 'react-slick';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+
 
 export default function HomeGallery() {
     const images = [

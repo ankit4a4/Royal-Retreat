@@ -80,7 +80,7 @@ const HeroSection = () => {
     children: 0,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e : any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -89,7 +89,7 @@ const HeroSection = () => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e : any) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   }
@@ -151,7 +151,7 @@ const HeroSection = () => {
               <input
                 type={type}
                 name={name}
-                value={formData[name]}
+                // value={formData[name] || ''}
                 onChange={handleChange}
                 placeholder={placeholder}
                 className="bg-transparent border-b border-white/30 focus:border-[#c1a47a] placeholder:text-white/40 focus:outline-none transition-all text-[1.5vh] md:text-[1vw]"
@@ -172,7 +172,7 @@ const HeroSection = () => {
                 <input
                   type="date"
                   name={name}
-                  value={formData[name]}
+                  // value={formData[name]}
                   onChange={handleChange}
                   className="bg-transparent w-full text-white placeholder:text-white/40 focus:outline-none text-[1.5vh] md:text-[1vw]"
                 />
@@ -193,7 +193,7 @@ const HeroSection = () => {
               </label>
               <select
                 name={name}
-                value={formData[name]}
+                // value={formData[name]}
                 onChange={handleChange}
                 className="bg-transparent border-b border-white/30 text-white focus:outline-none appearance-none text-[1.5vh] md:text-[1vw]"
               >
