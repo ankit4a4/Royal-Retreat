@@ -5,10 +5,13 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Menu, X, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { usePathname } from 'next/navigation';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,15 +33,15 @@ const Navbar = () => {
 
   const navItemsLeft = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/' },
-    { name: 'Rooms', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Rooms', href: '/rooms' },
   ];
 
   const navItemsRight = [
-    { name: 'Wellness', href: '/' },
-    { name: 'Yoga', href: '/' },
-    { name: 'Natural Pool', href: '/' },
-    { name: 'Contact', href: '/' },
+    { name: 'Wellness', href: '/wellness' },
+    { name: 'Yoga', href: '/yoga' },
+    { name: 'Natural Pool', href: '/natural-pool' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -60,7 +63,12 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${isScrolled ? 'text-black' : 'text-white'} font-medium hover:text-royal-gold transition-colors text-[1.3vw]`}
+                style={
+                  pathname === item.href ? {
+                    color: 'var(--royal-gold)',
+                  } : {}
+                }
+                className={`${isScrolled ? 'text-black' : 'text-white'}   font-medium hover:text-royal-gold transition-colors text-[1.3vw]`}
               >
                 {item.name}
               </Link>
