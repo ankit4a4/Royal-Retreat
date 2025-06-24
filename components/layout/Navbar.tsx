@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Menu, X, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,15 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMobileMenuOpen]);
 
   const navItemsLeft = [
     { name: 'Home', href: '/' },
@@ -43,6 +52,7 @@ const Navbar = () => {
         }`}
     >
       <div className="mx-auto px-4 md:px-[4vw] md:py-[1.5vw] py-3 ">
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between relative">
           {/* Left Nav */}
           <div className="flex items-center space-x-6 md:space-x-[2vw]">
@@ -62,13 +72,11 @@ const Navbar = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className=""
           >
             <Link href="/" className="flex items-center space-x-[1vw]">
               <Crown className="h-10 md:h-[5vh] md:w-[5vh] text-royal-gold" />
               <span
-                className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'}
-              text-[2vh] md:text-[1.7vw]`}
+                className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'} text-[2vh] md:text-[1.7vw]`}
               >
                 Palm Bliss
               </span>
@@ -89,10 +97,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Header */}
+        {/* Mobile Nav Header */}
         <div className="md:hidden flex items-center justify-between">
-          <Link href="/" className="flex items-center ">
-            <Crown className="h-8  text-royal-gold" />
+          <Link href="/" className="flex items-center gap-1 ">
+            <Crown className="h-8 text-royal-gold" />
             <span
               className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'} text-[2vh]`}
             >
@@ -114,29 +122,60 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Nav Menu */}
-        {/* Mobile Nav Menu */}
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 bg-white rounded-lg w-full overflow-x-hidden"
-          >
-            <div className="flex flex-col gap-2">
-              {[...navItemsLeft, ...navItemsRight].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block w-full py-2 text-black hover:text-royal-gold transition-colors font-medium text-[2.4vh] whitespace-nowrap"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <>
+              {/* Overlay */}
+              <motion.div
+                key="overlay"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[90]"
+              />
+
+              {/* Slide-in Menu */}
+              <motion.div
+                key="menu"
+                initial={{ x: '-100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '-100%' }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="fixed top-0 left-0 z-[100] min-h-screen w-[80vw] max-w-sm bg-white shadow-xl p-6 flex flex-col gap-4"
+              >
+                <div className="flex justify-between items-center mb-4">
+                  <Link href="/" className="flex items-center gap-1 ">
+                    <Crown className="h-8 text-royal-gold" />
+                    <span className="font-playfair font-extrabold tracking-wide text-black text-[2vh]">
+                      Palm Bliss
+                    </span>
+                  </Link>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-black hover:text-royal-gold transition"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  {[...navItemsLeft, ...navItemsRight].map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="py-2 px-3 rounded-md text-black text-[2.2vh] font-medium hover:bg-royal-gold/10 hover:text-royal-gold transition duration-300"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );
