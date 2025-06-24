@@ -48,7 +48,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-[1vh]">
               {[
-                { name: 'About Us', href: '/' },
+                { name: 'About Us', href: '/about' },
                 { name: 'Rooms & Suites', href: '/' },
                 { name: 'Wellness Center', href: '/' },
                 { name: 'Yoga Sessions', href: '/' },
