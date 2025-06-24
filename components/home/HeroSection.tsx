@@ -8,7 +8,7 @@ import { CalendarDays } from 'lucide-react';
 // ✅ Typewriter Hero Text Component
 const texts = [
   'WElCOME',
-  'Royal Retreat',
+  'Palm Bliss',
   'Luxury Stay',
   'Wellness Resort',
   'Nature Escapes',
@@ -80,7 +80,7 @@ const HeroSection = () => {
     children: 0,
   });
 
-  const handleChange = (e : any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -89,12 +89,12 @@ const HeroSection = () => {
   };
 
 
-  const handleSubmit = (e : any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   }
   return (
-    <section className="relative min-h-screen flex flex-col justify-end">
+    <section className="relative md:min-h-screen min-h-[80vh] flex flex-col justify-end">
       {/* Background Video */}
       <video
         autoPlay

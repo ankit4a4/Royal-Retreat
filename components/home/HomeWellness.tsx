@@ -8,7 +8,7 @@ import { Heart, Sparkles, Flower, Leaf } from 'lucide-react';
 
 export default function HomeWellness() {
     return (
-        <section className="py-[10vh] bg-[#A67A35]">
+        <section className="md:py-[10vh] py-10 bg-[#A67A35]">
             <div className=" mx-auto px-6 md:px-[8vw]">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -75,7 +75,7 @@ export default function HomeWellness() {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="text-center mt-[8vh]"
                 >
-                    <Button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1vw] font-medium px-8 py-3 rounded-full transition duration-200">
+                    <Button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1.2vw] rounded-full transition duration-200">
                         Explore Wellness
                     </Button>
                 </motion.div>

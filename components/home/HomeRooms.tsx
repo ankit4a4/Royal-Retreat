@@ -153,7 +153,7 @@ const RoomsSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center mt-[10vh]"
             >
-                <button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1vw] font-medium px-8 py-3 rounded-full transition duration-200">
+                <button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw ] md:py-[1vw] rounded-full transition duration-200">
                     View All Rooms
                 </button>
             </motion.div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#fbf7f0] py-[14vh] px-6 md:px-[10vw]">
+    <section className="bg-[#fbf7f0] md:py-[14vh] py-10 px-6 md:px-[10vw]">
       <div className=" mx-auto text-center space-y-[6vh]">
 
         {/* Heading */}

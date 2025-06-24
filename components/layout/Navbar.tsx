@@ -70,7 +70,7 @@ const Navbar = () => {
                 className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'}
               text-[2vh] md:text-[1.7vw]`}
               >
-                Royal Retreat
+                Palm Bliss
               </span>
             </Link>
           </motion.div>
@@ -96,7 +96,7 @@ const Navbar = () => {
             <span
               className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'} text-[2vh]`}
             >
-              Royal Retreat
+              Palm Bliss
             </span>
           </Link>
 

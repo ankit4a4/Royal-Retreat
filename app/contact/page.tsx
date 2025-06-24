@@ -56,7 +56,7 @@ export default function Contact() {
           <Image
             src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             fill
-            alt="Contact Royal Retreat"
+            alt="Contact Palm Bliss"
             className="object-cover opacity-60"
           />
         </div>
@@ -67,7 +67,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-playfair font-bold text-white mb-4">
-              Contact <span className="text-royal-gold">Royal Retreat</span>
+              Contact <span className="text-royal-gold">Palm Bliss</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               We're here to help you plan your perfect luxury getaway
@@ -228,7 +228,7 @@ export default function Contact() {
               Directions to <span className="text-royal-gold">Paradise</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Find your way to Royal Retreat Resort with our detailed directions
+              Find your way to Palm Bliss Resort with our detailed directions
             </p>
           </motion.div>
 
@@ -279,7 +279,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Royal Retreat Resort Location"
+              title="Palm Bliss Resort Location"
             ></iframe>
           </motion.div>
         </div>

@@ -26,7 +26,7 @@ const yogaData = [
 const YogaHomeSection = () => {
     return (
         <section
-            className="bg-[#A67A35] py-[12vh] px-6 md:px-[8vw]">
+            className="bg-[#A67A35] py-10 md:py-[12vh] px-6 md:px-[8vw]">
             {/* Heading */}
             <div className="text-center space-y-6 mb-[10vh]">
                 <motion.h2
@@ -41,7 +41,7 @@ const YogaHomeSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-[2.4vh] md:text-[1.15vw] text-[#fff] max-w-3xl mx-auto leading-relaxed"
+                    className="text-[2.4vh] md:text-[1.15vw] text-[#fff] mx-auto leading-relaxed"
                 >
                     Explore our carefully curated yoga experiences crafted for healing, energy, and inner transformation.
                 </motion.p>
@@ -50,7 +50,7 @@ const YogaHomeSection = () => {
             {/* Rows */}
             <div
 
-                className="space-y-[10vh]">
+                className="md:space-y-[10vh] space-y-10 ">
                 {yogaData.map((item, index) => (
                     <motion.div
                         key={index}
@@ -87,9 +87,9 @@ const YogaHomeSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center mt-[10vh]"
+                className="text-center md:mt-[10vh] mt-10"
             >
-                <Button className="bg-[#C9A062] hover:bg-[#b88d4f] text-white text-[2vh] md:text-[1vw] font-medium px-8 py-3 rounded-full transition duration-200">
+                <Button className="bg-[#C9A062] hover:bg-[#b88d4f] text-white text-[2vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full transition duration-200">
                     Explore All Yoga Offerings
                 </Button>
             </motion.div>
