@@ -17,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Royal Retreat Resort - Premium Luxury Resort Experience',
-  description: 'Experience the ultimate luxury at Royal Retreat Resort. Wellness, yoga, natural pools, and world-class amenities in a serene natural setting.',
+  title: 'Palm Bliss Resort - Premium Luxury Resort Experience',
+  description: 'Experience the ultimate luxury at Palm Bliss Resort. Wellness, yoga, natural pools, and world-class amenities in a serene natural setting.',
 };
 
 export default function RootLayout({

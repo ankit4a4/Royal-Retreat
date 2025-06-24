@@ -145,7 +145,7 @@ const HowToReach = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Royal Retreat Resort Location"
+                    title="Palm Bliss Resort Location"
                   ></iframe>
                 </div>
               </CardContent>

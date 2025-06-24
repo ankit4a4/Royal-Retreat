@@ -37,7 +37,7 @@ export default function About() {
           <Image
             src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             fill
-            alt="About Royal Retreat"
+            alt="About Palm Bliss"
             className="object-cover opacity-60"
           />
         </div>
@@ -48,7 +48,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-playfair font-bold text-white mb-4">
-              About <span className="text-royal-gold">Royal Retreat</span>
+              About <span className="text-royal-gold">Palm Bliss</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl">
               A legacy of luxury, wellness, and exceptional hospitality
@@ -70,7 +70,7 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded with a vision to create an oasis of tranquility and luxury, Royal Retreat Resort 
+                Founded with a vision to create an oasis of tranquility and luxury, Palm Bliss Resort 
                 has been welcoming discerning guests for over two decades. Nestled in the heart of Paradise Valley, 
                 our resort combines timeless elegance with modern sophistication.
               </p>
@@ -81,7 +81,7 @@ export default function About() {
               </p>
               <p className="text-lg text-gray-600">
                 Our commitment to excellence has earned us recognition from leading travel publications and 
-                the unwavering loyalty of guests who return year after year to experience the magic of Royal Retreat.
+                the unwavering loyalty of guests who return year after year to experience the magic of Palm Bliss.
               </p>
             </motion.div>
             <motion.div
@@ -114,7 +114,7 @@ export default function About() {
               Our <span className="text-royal-gold">Values</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              The principles that guide everything we do at Royal Retreat Resort
+              The principles that guide everything we do at Palm Bliss Resort
             </p>
           </motion.div>
 
