@@ -16,7 +16,17 @@ import Testimonials from '@/components/home/testimonials';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <HeroSection />
+      <HeroSection
+        texts={[
+          'WELCOME',
+          'Palm Bliss',
+          'Luxury Stay',
+          'Wellness Resort',
+          'Nature Escapes',
+          'Himalayan Hospitality',
+        ]}
+        welcomeHeading="WELCOME"
+      />
       <AboutSection />
       <HomeWellness />
       <HomeRooms />

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+
 import {
   Crown,
   MapPin,
@@ -49,7 +50,7 @@ const Footer = () => {
             <ul className="space-y-[1vh]">
               {[
                 { name: 'About Us', href: '/about' },
-                { name: 'Rooms & Suites', href: '/' },
+                { name: 'Rooms & Suites', href: '/rooms' },
                 { name: 'Wellness Center', href: '/' },
                 { name: 'Yoga Sessions', href: '/' },
                 { name: 'Contact', href: '/' },
