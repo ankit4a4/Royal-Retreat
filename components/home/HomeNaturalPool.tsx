@@ -4,25 +4,28 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Droplets, Leaf, Moon, Waves } from 'lucide-react';
+import image from "@/public/Images/AllPhotos/DSC06421.jpg"
+import image2 from "@/public/Images/AllPhotos/DSC06413.jpg"
+import image3 from "@/public/Images/AllPhotos/DSC06431.jpg"
 
 export default function HomeNaturalPool() {
   const sections = [
     {
       title: 'Infinity Edge Design',
       desc: 'Our pool seamlessly blends with the horizon, creating a breathtaking visual experience that brings tranquility and luxury together.',
-      img: 'https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      img: image.src,
       icon: Waves,
     },
     {
       title: 'Natural Filtration & Eco-Friendly System',
       desc: 'State-of-the-art natural filtration system using aquatic plants and minerals. Our eco-conscious pool design respects and blends into nature, avoiding harsh chemicals.',
-      img: 'https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      img: image2.src,
       icon: Droplets,
     },
     {
       title: 'Solar Heated & Night Ready',
       desc: 'Our solar-powered heating ensures the perfect water temperature any time of day, while romantic underwater lights and a stargazing platform complete the evening vibe.',
-      img: 'https://images.pexels.com/photos/3768999/pexels-photo-3768999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      img: image3.src,
       icon: Moon,
     },
   ];

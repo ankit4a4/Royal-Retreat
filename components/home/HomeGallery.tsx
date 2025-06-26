@@ -6,15 +6,23 @@ import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import img from '@/public/Images/AllPhotos/DSC06389.jpg';
+import img2 from '@/public/Images/AllPhotos/DSC06396.jpg';
+import img3 from '@/public/Images/AllPhotos/DSC06399.jpg';
+import img4 from '@/public/Images/AllPhotos/DSC06434.jpg';
+import img5 from '@/public/Images/AllPhotos/DSC06460.jpg';
+import img6 from '@/public/Images/AllPhotos/DSC06475.jpg';
+import img7 from '@/public/Images/AllPhotos/DSC06521.jpg';
 
 export default function HomeGallery() {
     const images = [
-        'https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg',
-        'https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg',
-        'https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg',
-        'https://images.pexels.com/photos/3768997/pexels-photo-3768997.jpeg',
-        'https://images.pexels.com/photos/3768999/pexels-photo-3768999.jpeg',
-        'https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg',
+        img.src,
+        img2.src,
+        img3.src,
+        img4.src,
+        img5.src,
+        img6.src,
+        img7.src,
     ];
 
     const [selectedImage, setSelectedImage] = useState<string | null>(null);

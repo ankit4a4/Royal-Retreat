@@ -3,50 +3,34 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Slider from 'react-slick';
+import image1 from "@/public/Images/AllPhotos/DSC06396.jpg"
+import image2 from "@/public/Images/AllPhotos/DSC06521.jpg"
+import image3 from "@/public/Images/AllPhotos/DSC06399.jpg"
+
 
 const rooms = [
     {
         name: 'Deluxe Himalayan Cottage',
-        img: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80',
+        img: image1.src,
         description:
             'A peaceful, mountain-facing cottage made of mud and stone, featuring hand-carved wooden interiors and Ayurvedic ambiance.',
         price: '₹5,499 / night',
     },
     {
         name: 'Luxury Wellness Suite',
-        img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
+        img: image2.src,
         description:
             'Spacious suite with private garden, open shower, and natural ventilation. Ideal for long stays & healing therapies.',
         price: '₹7,999 / night',
     },
     {
         name: 'Eco Forest View Room',
-        img: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?cs=srgb&dl=pexels-jvdm-1457842.jpg&fm=jpg',
+        img: image3.src,
         description:
             'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
         price: '₹4,299 / night',
     },
-    {
-        name: 'Deluxe Himalayan Cottage',
-        img: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80',
-        description:
-            'A peaceful, mountain-facing cottage made of mud and stone, featuring hand-carved wooden interiors and Ayurvedic ambiance.',
-        price: '₹5,499 / night',
-    },
-    {
-        name: 'Luxury Wellness Suite',
-        img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
-        description:
-            'Spacious suite with private garden, open shower, and natural ventilation. Ideal for long stays & healing therapies.',
-        price: '₹7,999 / night',
-    },
-    {
-        name: 'Eco Forest View Room',
-        img: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?cs=srgb&dl=pexels-jvdm-1457842.jpg&fm=jpg',
-        description:
-            'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
-        price: '₹4,299 / night',
-    },
+
 ];
 
 const sliderSettings = {
