@@ -1,12 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Slider from 'react-slick';
-import image1 from "@/public/Images/AllPhotos/DSC06396.jpg"
-import image2 from "@/public/Images/AllPhotos/DSC06521.jpg"
-import image3 from "@/public/Images/AllPhotos/DSC06399.jpg"
 
+import image1 from "@/public/Images/AllPhotos/DSC06396.jpg";
+import image2 from "@/public/Images/AllPhotos/DSC06521.jpg";
+import image3 from "@/public/Images/AllPhotos/DSC06399.jpg";
 
 const rooms = [
     {
@@ -30,7 +29,6 @@ const rooms = [
             'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
         price: '₹4,299 / night',
     },
-
 ];
 
 const sliderSettings = {
@@ -64,25 +62,15 @@ const sliderSettings = {
 
 const RoomsSection = () => {
     return (
-        <section className="bg-[#FBF7F0]   py-[3vh] md:py-[12vh] px-6 md:px-[8vw]">
+        <section className="bg-[#FBF7F0] py-[3vh] md:py-[12vh] px-6 md:px-[8vw]">
             <div className="text-center space-y-[5vh] mx-auto">
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-[6vw] md:text-[2.8vw] font-playfair font-bold text-[#000] leading-tight"
-                >
+                <h2 className="text-[6vw] md:text-[2.8vw] font-playfair font-bold text-[#000] leading-tight">
                     Stay in <span className="text-[#A67A35]">Harmony & Comfort</span>
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-[2.5vh] md:text-[1.2vw] text-gray-700 leading-relaxed mx-auto"
-                >
+                </h2>
+                <p className="text-[2.5vh] md:text-[1.2vw] text-gray-700 leading-relaxed mx-auto">
                     Our rooms are more than a place to rest — they're sanctuaries for deep sleep,
                     holistic healing, and spiritual calm.
-                </motion.p>
+                </p>
             </div>
 
             {/* Room Cards Slider */}
@@ -90,21 +78,16 @@ const RoomsSection = () => {
                 <Slider {...sliderSettings}>
                     {rooms.map((room, idx) => (
                         <div key={idx} className="px-3">
-                            <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.7, delay: idx * 0.2 }}
-                                className="bg-white rounded-xl overflow-hidden shadow-md border border-[#e4d8c5] hover:shadow-lg transition duration-300 flex flex-col h-full"
-                            >
+                            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-[#e4d8c5] hover:shadow-lg transition duration-300 flex flex-col h-full">
                                 <div className="relative w-full h-56 md:h-[35vh]">
                                     <Image
+                                        height={0}
+                                        width={0}
                                         src={room.img}
                                         alt={room.name}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        quality={85}
+                                        className="object-cover h-[100%] w-[100%]"
                                     />
+
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col justify-between">
                                     <div>
@@ -124,23 +107,18 @@ const RoomsSection = () => {
                                         </button>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
                     ))}
                 </Slider>
             </div>
 
             {/* View All Button */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center mt-[10vh]"
-            >
-                <button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw ] md:py-[1vw] rounded-full transition duration-200">
+            <div className="text-center mt-[10vh]">
+                <button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full transition duration-200">
                     View All Rooms
                 </button>
-            </motion.div>
+            </div>
         </section>
     );
 };

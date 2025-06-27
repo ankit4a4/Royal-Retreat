@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from "@/public/logo.png"
 
 import {
   Crown,
@@ -26,10 +28,7 @@ const Footer = () => {
             className="space-y-[2vh]"
           >
             <Link href="/" className="flex items-center space-x-[1vw]">
-              <Crown className="h-[4vw] w-[4vw] md:h-[2vw] md:w-[2vw] text-royal-gold" />
-              <span className="text-[5vw] md:text-[1.8vw] font-playfair font-bold">
-                Palm Bliss
-              </span>
+              <Image src={logo} alt="Logo" className=" object-contain h-[100px] " />
             </Link>
             <p className="text-gray-400 text-[3.5vw] md:text-[1.1vw] leading-relaxed">
               Experience luxury and tranquility in our world-class resort, where

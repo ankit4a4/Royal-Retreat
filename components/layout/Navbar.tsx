@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { Menu, X, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePathname } from 'next/navigation';
+import logo from "@/public/logo.png"
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +54,7 @@ const Navbar = () => {
         : 'bg-transparent'
         }`}
     >
-      <div className="mx-auto px-4 md:px-[4vw] md:py-[1.5vw] py-3 ">
+      <div className="mx-auto px-4 md:px-[4vw] md:py-[2vw] py-3 ">
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between relative">
           {/* Left Nav */}
@@ -72,20 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo Center */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Link href="/" className="flex items-center space-x-[1vw]">
-              <Crown className="h-10 md:h-[5vh] md:w-[5vh] text-royal-gold" />
-              <span
-                className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'} text-[2vh] md:text-[1.7vw]`}
-              >
-                Palm Bliss
-              </span>
-            </Link>
-          </motion.div>
+          <Image src={logo} alt="Logo" className="absolute left-1/2 transform -translate-x-1/2 md:h-[230%] object-contain" />
 
           {/* Right Nav */}
           <div className="flex items-center space-x-6 md:space-x-[2vw]">
@@ -106,13 +95,8 @@ const Navbar = () => {
 
         {/* Mobile Nav Header */}
         <div className="md:hidden flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-1 ">
-            <Crown className="h-8 text-royal-gold" />
-            <span
-              className={`font-playfair font-extrabold tracking-wide ${isScrolled ? 'text-black' : 'text-white'} text-[2vh]`}
-            >
-              Palm Bliss
-            </span>
+          <Link href="/" className="flex items-center justify-start gap-1 ">
+            <Image src={logo} alt="Logo" className="absolute left-[12%] transform -translate-x-1/2 w-[30%] object-contain" />
           </Link>
 
           <Button
@@ -154,10 +138,7 @@ const Navbar = () => {
               >
                 <div className="flex justify-between items-center mb-4">
                   <Link href="/" className="flex items-center gap-1 ">
-                    <Crown className="h-8 text-royal-gold" />
-                    <span className="font-playfair font-extrabold tracking-wide text-black text-[2vh]">
-                      Palm Bliss
-                    </span>
+                    <Image src={logo} alt="Logo" className="absolute left-[20%] transform -translate-x-1/2 w-[30%] object-contain" />
                   </Link>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
