@@ -37,7 +37,7 @@ const RoomFeature = () => {
     ];
 
     return (
-        <section className=" py-8 md:py-20 bg-royal-gold">
+        <section className=" py-8 md:py-20 bg-royal-gold ">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

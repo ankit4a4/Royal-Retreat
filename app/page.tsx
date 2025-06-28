@@ -1,10 +1,6 @@
 'use client';
 
 import HeroSection from '@/components/home/HeroSection';
-import HowToReach from '@/components/home/HowToReach';
-import ViewsSection from '@/components/home/ViewsSection';
-import CuisineSection from '@/components/home/CuisineSection';
-import FacilitiesSection from '@/components/home/FacilitiesSection';
 import AboutSection from '@/components/home/AboutSection ';
 import HomeRooms from '@/components/home/HomeRooms';
 import HomeYoga from '@/components/home/HomeYoga';

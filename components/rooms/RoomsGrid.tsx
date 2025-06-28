@@ -9,65 +9,66 @@ import Image from 'next/image';
 
 const RoomsGrid = () => {
 
-    const rooms = [
-        {
-          title: 'Royal Suite',
-          description: 'The pinnacle of luxury with panoramic mountain views, private balcony, and exclusive amenities.',
-          image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$1,200',
-          capacity: '2 Adults',
-          amenities: ['Private Balcony', 'King Size Bed', 'Jacuzzi', 'Butler Service', 'Mountain View', 'Mini Bar'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        },
-        {
-          title: 'Deluxe Villa',
-          description: 'Spacious villa with separate living area, perfect for families or extended stays.',
-          image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$800',
-          capacity: '4 Adults',
-          amenities: ['Living Room', 'Kitchen', 'Garden View', 'Private Pool', 'Terrace', 'Dining Area'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        },
-        {
-          title: 'Garden Room',
-          description: 'Elegant room overlooking our beautiful gardens, perfect for a romantic getaway.',
-          image: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$450',
-          capacity: '2 Adults',
-          amenities: ['Garden View', 'Queen Bed', 'Marble Bathroom', 'Balcony', 'Work Desk', 'Safe'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        },
-        {
-          title: 'Wellness Suite',
-          description: 'Specially designed for wellness enthusiasts with yoga space and spa amenities.',
-          image: 'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$650',
-          capacity: '2 Adults',
-          amenities: ['Yoga Mat', 'Meditation Corner', 'Aromatherapy', 'Spa Products', 'Sound System', 'Healthy Minibar'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        },
-        {
-          title: 'Mountain View Room',
-          description: 'Breathtaking mountain views from your private balcony with modern amenities.',
-          image: 'https://images.pexels.com/photos/1834395/pexels-photo-1834395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$500',
-          capacity: '2 Adults',
-          amenities: ['Mountain View', 'Balcony', 'King Bed', 'Sitting Area', 'Premium Linens', 'Room Service'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        },
-        {
-          title: 'Family Suite',
-          description: 'Perfect for families with connecting rooms and child-friendly amenities.',
-          image: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          price: '$750',
-          capacity: '4 Adults + 2 Children',
-          amenities: ['Connecting Rooms', 'Play Area', 'Child Safety', 'Family Dining', 'Entertainment', 'Babysitting'],
-          features: [Wifi, Car, Coffee, Tv, Wind, Users]
-        }
-      ];
+  const rooms = [
+    {
+      title: 'Royal Suite',
+      description: 'The pinnacle of luxury with panoramic mountain views, private balcony, and exclusive amenities.',
+      image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹99,999',
+      capacity: '2 Adults',
+      amenities: ['Private Balcony', 'King Size Bed', 'Jacuzzi', 'Butler Service', 'Mountain View', 'Mini Bar'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    },
+    {
+      title: 'Deluxe Villa',
+      description: 'Spacious villa with separate living area, perfect for families or extended stays.',
+      image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹66,999',
+      capacity: '4 Adults',
+      amenities: ['Living Room', 'Kitchen', 'Garden View', 'Private Pool', 'Terrace', 'Dining Area'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    },
+    {
+      title: 'Garden Room',
+      description: 'Elegant room overlooking our beautiful gardens, perfect for a romantic getaway.',
+      image: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹37,999',
+      capacity: '2 Adults',
+      amenities: ['Garden View', 'Queen Bed', 'Marble Bathroom', 'Balcony', 'Work Desk', 'Safe'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    },
+    {
+      title: 'Wellness Suite',
+      description: 'Specially designed for wellness enthusiasts with yoga space and spa amenities.',
+      image: 'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹53,999',
+      capacity: '2 Adults',
+      amenities: ['Yoga Mat', 'Meditation Corner', 'Aromatherapy', 'Spa Products', 'Sound System', 'Healthy Minibar'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    },
+    {
+      title: 'Mountain View Room',
+      description: 'Breathtaking mountain views from your private balcony with modern amenities.',
+      image: 'https://images.pexels.com/photos/1834395/pexels-photo-1834395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹41,999',
+      capacity: '2 Adults',
+      amenities: ['Mountain View', 'Balcony', 'King Bed', 'Sitting Area', 'Premium Linens', 'Room Service'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    },
+    {
+      title: 'Family Suite',
+      description: 'Perfect for families with connecting rooms and child-friendly amenities.',
+      image: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      price: '₹62,999',
+      capacity: '4 Adults + 2 Children',
+      amenities: ['Connecting Rooms', 'Play Area', 'Child Safety', 'Family Dining', 'Entertainment', 'Babysitting'],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+    }
+  ];
+
   return (
     <div>
-       <section className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rooms.map((room, index) => (
@@ -93,7 +94,7 @@ const RoomsGrid = () => {
                       </Badge>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <h3 className="text-2xl font-playfair font-bold text-black mb-2">
                       {room.title}
@@ -101,7 +102,7 @@ const RoomsGrid = () => {
                     <p className="text-gray-600 mb-4">
                       {room.description}
                     </p>
-                    
+
                     <div className="flex items-center gap-2 mb-4">
                       <Users className="h-4 w-4 text-royal-gold" />
                       <span className="text-sm text-gray-600">{room.capacity}</span>

@@ -38,8 +38,8 @@ const Navbar = () => {
   ];
 
   const navItemsRight = [
-    { name: 'Wellness', href: '/#' },
-    { name: 'Yoga', href: '/#' },
+    { name: 'Wellness', href: '/wellness' },
+    { name: 'Yoga', href: '/yoga' },
     { name: 'Natural Pool', href: '/#' },
     { name: 'Contact', href: '/#' },
   ];
@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between relative">
           {/* Left Nav */}
-          <div className="flex items-center space-x-6 md:space-x-[2vw]">
+          <div className="flex items-center space-x-6 md:space-x-[2vw] z-10">
             {navItemsLeft.map((item) => (
               <Link
                 key={item.name}
@@ -77,7 +77,7 @@ const Navbar = () => {
           <Image src={logo} alt="Logo" className="absolute left-1/2 transform -translate-x-1/2 md:h-[230%] object-contain" />
 
           {/* Right Nav */}
-          <div className="flex items-center space-x-6 md:space-x-[2vw]">
+          <div className="flex items-center z-10 space-x-6 md:space-x-[2vw]">
             {navItemsRight.map((item) => (
               <Link
                 key={item.name}

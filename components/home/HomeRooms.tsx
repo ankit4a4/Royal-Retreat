@@ -1,66 +1,70 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import Slider from 'react-slick';
-
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useRouter } from 'next/navigation';
 import image1 from "@/public/Images/AllPhotos/DSC06396.webp";
 import image2 from "@/public/Images/AllPhotos/DSC06521.webp";
 import image3 from "@/public/Images/AllPhotos/DSC06399.webp";
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
-const rooms = [
-    {
-        name: 'Deluxe Himalayan Cottage',
-        img: image1.src,
-        description:
-            'A peaceful, mountain-facing cottage made of mud and stone, featuring hand-carved wooden interiors and Ayurvedic ambiance.',
-        price: '₹5,499 / night',
-    },
-    {
-        name: 'Luxury Wellness Suite',
-        img: image2.src,
-        description:
-            'Spacious suite with private garden, open shower, and natural ventilation. Ideal for long stays & healing therapies.',
-        price: '₹7,999 / night',
-    },
-    {
-        name: 'Eco Forest View Room',
-        img: image3.src,
-        description:
-            'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
-        price: '₹4,299 / night',
-    },
-];
 
-const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            },
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                arrows: false,
-            },
-        },
-    ],
-};
+
+
+
 
 const RoomsSection = () => {
+    const router = useRouter();
+    const rooms = [
+        {
+            name: 'Deluxe Himalayan Cottage',
+            img: image1.src,
+            description:
+                'A peaceful, mountain-facing cottage made of mud and stone, featuring hand-carved wooden interiors and Ayurvedic ambiance.',
+            price: '₹5,499 / night',
+        },
+        {
+            name: 'Luxury Wellness Suite',
+            img: image2.src,
+            description:
+                'Spacious suite with private garden, open shower, and natural ventilation. Ideal for long stays & healing therapies.',
+            price: '₹7,999 / night',
+        },
+        {
+            name: 'Eco Forest View Room',
+            img: image3.src,
+            description:
+                'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
+            price: '₹4,299 / night',
+        },
+    ];
+
+    const sliderSettings = {
+        dots: false,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
+    };
     return (
         <section className="bg-[#FBF7F0] py-[3vh] md:py-[12vh] px-6 md:px-[8vw]">
             <div className="text-center space-y-[5vh] mx-auto">
@@ -74,21 +78,20 @@ const RoomsSection = () => {
             </div>
 
             {/* Room Cards Slider */}
-            <div className="mt-[8vh] mx-auto ">
+            <div className="mt-[8vh]">
                 <Slider {...sliderSettings}>
                     {rooms.map((room, idx) => (
-                        <div key={idx} className="px-3">
+                        <div key={idx} className="px-4">
                             <div className="bg-white rounded-xl overflow-hidden shadow-md border border-[#e4d8c5] hover:shadow-lg transition duration-300 flex flex-col h-full">
                                 <div className="relative w-full h-56 md:h-[35vh]">
                                     <Image
-                                        height={0}
-                                        width={0}
                                         src={room.img}
                                         alt={room.name}
-                                        className="object-cover h-[100%] w-[100%]"
-                                        priority
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover"
+                                        priority={idx === 0}
                                     />
-
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col justify-between">
                                     <div>
@@ -103,7 +106,8 @@ const RoomsSection = () => {
                                         <span className="text-[#C9A062] font-semibold text-[2.3vh] md:text-[1.15vw]">
                                             {room.price}
                                         </span>
-                                        <button className="bg-[#C9A062] hover:bg-[#b88d4f] text-white text-[2vh] md:text-[1vw] font-medium px-4 py-2 rounded-full transition duration-200">
+
+                                        <button className="bg-[#C9A062] text-white text-[2vh] md:text-[1vw] font-medium px-4 py-2 rounded-full">
                                             Book Now
                                         </button>
                                     </div>
@@ -116,7 +120,9 @@ const RoomsSection = () => {
 
             {/* View All Button */}
             <div className="text-center mt-[10vh]">
-                <button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full transition duration-200">
+                <button
+                    onClick={() => router.push('/rooms')}
+                    className="bg-[#3c2f23] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full">
                     View All Rooms
                 </button>
             </div>
