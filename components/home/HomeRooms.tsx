@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
 
-import image1 from "@/public/Images/AllPhotos/DSC06396.jpg";
-import image2 from "@/public/Images/AllPhotos/DSC06521.jpg";
-import image3 from "@/public/Images/AllPhotos/DSC06399.jpg";
+import image1 from "@/public/Images/AllPhotos/DSC06396.webp";
+import image2 from "@/public/Images/AllPhotos/DSC06521.webp";
+import image3 from "@/public/Images/AllPhotos/DSC06399.webp";
 
 const rooms = [
     {
@@ -86,6 +86,7 @@ const RoomsSection = () => {
                                         src={room.img}
                                         alt={room.name}
                                         className="object-cover h-[100%] w-[100%]"
+                                        priority
                                     />
 
                                 </div>

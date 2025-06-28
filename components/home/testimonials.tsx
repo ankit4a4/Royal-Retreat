@@ -92,6 +92,7 @@ export default function Testimonials() {
                                             width={100}
                                             height={100}
                                             className="object-cover w-full h-full"
+                                            priority
                                         />
                                     </div>
                                     <div>

@@ -6,13 +6,13 @@ import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import img from '@/public/Images/AllPhotos/DSC06389.jpg';
-import img2 from '@/public/Images/AllPhotos/DSC06396.jpg';
-import img3 from '@/public/Images/AllPhotos/DSC06399.jpg';
-import img4 from '@/public/Images/AllPhotos/DSC06434.jpg';
-import img5 from '@/public/Images/AllPhotos/DSC06460.jpg';
-import img6 from '@/public/Images/AllPhotos/DSC06475.jpg';
-import img7 from '@/public/Images/AllPhotos/DSC06521.jpg';
+import img from '@/public/Images/AllPhotos/DSC06389.webp';
+import img2 from '@/public/Images/AllPhotos/DSC06396.webp';
+import img3 from '@/public/Images/AllPhotos/DSC06399.webp';
+import img4 from '@/public/Images/AllPhotos/DSC06434.webp';
+import img5 from '@/public/Images/AllPhotos/DSC06460.webp';
+import img6 from '@/public/Images/AllPhotos/DSC06475.webp';
+import img7 from '@/public/Images/AllPhotos/DSC06521.webp';
 
 export default function HomeGallery() {
     const images = [
@@ -91,6 +91,7 @@ export default function HomeGallery() {
                                     alt={`Gallery Image ${index + 1}`}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    priority
                                 />
                                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <div className="absolute bottom-[2vh] left-[2vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
