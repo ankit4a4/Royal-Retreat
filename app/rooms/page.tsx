@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+
 import RoomsGrid from '@/components/rooms/RoomsGrid';
 import RoomFeature from '@/components/rooms/RoomFeature';
 import HeroSection from '@/components/home/HeroSection';

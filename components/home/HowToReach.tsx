@@ -93,7 +93,7 @@ const HowToReach = () => {
                         </div>
                         <div>
                           <h3 className="text-[2.6vh] md:text-[1.3vw] font-playfair font-semibold mb-2">
-                            Royal Valley Railway Station
+                            Palm bliss Railway Station
                           </h3>
                           <p className="text-[#5c5344] text-[2.2vh] md:text-[1.15vw] mb-4 leading-relaxed">
                             Modern railway station with connections to major cities and scenic routes
@@ -165,7 +165,7 @@ const HowToReach = () => {
             <span className="text-[2.6vh] md:text-[1.3vw] font-semibold text-[#4B3F2F]">Resort Address</span>
           </div>
           <p className="text-[#5c5344] text-[2.2vh] md:text-[1.15vw] max-w-md mx-auto leading-relaxed">
-            Royal Hills, Luxury Resort District, Paradise Valley,
+            Palm bliss, Luxury Resort District, Paradise Valley,
             Nestled in the heart of natural beauty
           </p>
         </motion.div>

@@ -80,7 +80,7 @@ const Footer = () => {
               <div className="flex items-center space-x-[1vw]">
                 <MapPin className="h-[4vw] w-[4vw] md:h-[1.2vw] md:w-[1.2vw] text-royal-gold" />
                 <span className="text-gray-400 text-[3.5vw] md:text-[1.1vw]">
-                  Royal Hills, Luxury Resort District, Paradise Valley
+                  Palm bliss, Luxury Resort District, Paradise Valley
                 </span>
               </div>
               <div className="flex items-center space-x-[1vw]">
@@ -92,7 +92,7 @@ const Footer = () => {
               <div className="flex items-center space-x-[1vw]">
                 <Mail className="h-[4vw] w-[4vw] md:h-[1.2vw] md:w-[1.2vw] text-royal-gold" />
                 <span className="text-gray-400 text-[3.5vw] md:text-[1.1vw]">
-                  info@royalretreat.com
+                  info@Palmbliss.com
                 </span>
               </div>
             </div>

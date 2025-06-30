@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import bgImage from "../../public/bgImage.jpg"
+import { useRouter } from 'next/navigation';
 
 const yogaData = [
     {
@@ -24,6 +24,7 @@ const yogaData = [
 ];
 
 const YogaHomeSection = () => {
+    const router = useRouter();
     return (
         <section
             className="bg-[#A67A35] py-10 md:py-[12vh] px-6 md:px-[8vw]">
@@ -89,7 +90,9 @@ const YogaHomeSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center md:mt-[10vh] mt-10"
             >
-                <Button className="bg-[#C9A062] hover:bg-[#b88d4f] text-white text-[2vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full transition duration-200">
+                <Button
+                    onClick={() => router.push('/yoga')}
+                    className="bg-[#C9A062] hover:bg-[#b88d4f] text-white text-[2vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1vw] rounded-full transition duration-200">
                     Explore All Yoga Offerings
                 </Button>
             </motion.div>

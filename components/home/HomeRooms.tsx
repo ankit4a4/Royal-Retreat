@@ -1,5 +1,5 @@
 'use client';
-
+import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
@@ -8,6 +8,10 @@ import { useRouter } from 'next/navigation';
 import image1 from "@/public/Images/AllPhotos/DSC06396.webp";
 import image2 from "@/public/Images/AllPhotos/DSC06521.webp";
 import image3 from "@/public/Images/AllPhotos/DSC06399.webp";
+import { Card, CardContent } from '@/components/ui/card';
+import { Wifi, Car, Coffee, Tv, Wind, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 
@@ -17,29 +21,70 @@ const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 const RoomsSection = () => {
     const router = useRouter();
+
     const rooms = [
         {
-            name: 'Deluxe Himalayan Cottage',
-            img: image1.src,
-            description:
-                'A peaceful, mountain-facing cottage made of mud and stone, featuring hand-carved wooden interiors and Ayurvedic ambiance.',
-            price: '₹5,499 / night',
+            id: 1,
+            title: 'Royal Suite',
+            description: 'The pinnacle of luxury with panoramic mountain views, private balcony, and exclusive amenities.',
+            image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹99,999',
+            capacity: '2 Adults',
+            amenities: ['Private Balcony', 'King Size Bed', 'Jacuzzi', 'Butler Service', 'Mountain View', 'Mini Bar'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
         },
         {
-            name: 'Luxury Wellness Suite',
-            img: image2.src,
-            description:
-                'Spacious suite with private garden, open shower, and natural ventilation. Ideal for long stays & healing therapies.',
-            price: '₹7,999 / night',
+            id: 2,
+            title: 'Deluxe Villa',
+            description: 'Spacious villa with separate living area, perfect for families or extended stays.',
+            image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹66,999',
+            capacity: '4 Adults',
+            amenities: ['Living Room', 'Kitchen', 'Garden View', 'Private Pool', 'Terrace', 'Dining Area'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
         },
         {
-            name: 'Eco Forest View Room',
-            img: image3.src,
-            description:
-                'Overlooking lush forest, this serene retreat room is perfect for mindfulness & meditation.',
-            price: '₹4,299 / night',
+            id: 3,
+            title: 'Garden Room',
+            description: 'Elegant room overlooking our beautiful gardens, perfect for a romantic getaway.',
+            image: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹37,999',
+            capacity: '2 Adults',
+            amenities: ['Garden View', 'Queen Bed', 'Marble Bathroom', 'Balcony', 'Work Desk', 'Safe'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
         },
+        {
+            id: 4,
+            title: 'Wellness Suite',
+            description: 'Specially designed for wellness enthusiasts with yoga space and spa amenities.',
+            image: 'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹53,999',
+            capacity: '2 Adults',
+            amenities: ['Yoga Mat', 'Meditation Corner', 'Aromatherapy', 'Spa Products', 'Sound System', 'Healthy Minibar'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
+        },
+        {
+            id: 5,
+            title: 'Mountain View Room',
+            description: 'Breathtaking mountain views from your private balcony with modern amenities.',
+            image: 'https://images.pexels.com/photos/1834395/pexels-photo-1834395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹41,999',
+            capacity: '2 Adults',
+            amenities: ['Mountain View', 'Balcony', 'King Bed', 'Sitting Area', 'Premium Linens', 'Room Service'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
+        },
+        {
+            id: 6,
+            title: 'Family Suite',
+            description: 'Perfect for families with connecting rooms and child-friendly amenities.',
+            image: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            price: '₹62,999',
+            capacity: '4 Adults + 2 Children',
+            amenities: ['Connecting Rooms', 'Play Area', 'Child Safety', 'Family Dining', 'Entertainment', 'Babysitting'],
+            features: [Wifi, Car, Coffee, Tv, Wind, Users]
+        }
     ];
+
 
     const sliderSettings = {
         dots: false,
@@ -80,40 +125,74 @@ const RoomsSection = () => {
             {/* Room Cards Slider */}
             <div className="mt-[8vh]">
                 <Slider {...sliderSettings}>
-                    {rooms.map((room, idx) => (
-                        <div key={idx} className="px-4">
-                            <div className="bg-white rounded-xl overflow-hidden shadow-md border border-[#e4d8c5] hover:shadow-lg transition duration-300 flex flex-col h-full">
-                                <div className="relative w-full h-56 md:h-[35vh]">
+                    {rooms.map((room, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                            whileHover={{ y: -5 }}
+                            className="group px-3"
+                        >
+                            <Card className="h-full bg-white border-gray-200 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                                <div className="relative h-64">
                                     <Image
-                                        src={room.img}
-                                        alt={room.name}
+                                        src={room.image}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                        className="object-cover"
-                                        priority={idx === 0}
+                                        alt={room.title}
+                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
-                                </div>
-                                <div className="p-6 flex-1 flex flex-col justify-between">
-                                    <div>
-                                        <h3 className="text-[2.3vh] md:text-[1.2vw] font-playfair font-semibold text-[#3c2f23] mb-2">
-                                            {room.name}
-                                        </h3>
-                                        <p className="text-[2.2vh] md:text-[1.05vw] text-[#5c5344] mb-4 leading-relaxed line-clamp-2">
-                                            {room.description}
-                                        </p>
+                                    <div className="absolute top-4 right-4">
+                                        <Badge className="bg-[#A67A35] text-black font-semibold">
+                                            {room.price}/night
+                                        </Badge>
                                     </div>
-                                    <div className="flex items-center justify-between mt-auto">
-                                        <span className="text-[#C9A062] font-semibold text-[2.3vh] md:text-[1.15vw]">
-                                            {room.price}
-                                        </span>
+                                </div>
 
-                                        <button className="bg-[#C9A062] text-white text-[2vh] md:text-[1vw] font-medium px-4 py-2 rounded-full">
-                                            Book Now
-                                        </button>
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl md:text-2xl font-playfair font-bold text-black mb-2">
+                                        {room.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm md:text-base mb-4">
+                                        {room.description}
+                                    </p>
+
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <Users className="h-4 w-4 text-[#A67A35]" />
+                                        <span className="text-sm text-gray-600">{room.capacity}</span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+
+                                    <div className="mb-4">
+                                        <h4 className="font-semibold text-black mb-2">Amenities</h4>
+                                        <div className="flex flex-wrap gap-1">
+                                            {room.amenities.slice(0, 4).map((amenity, idx) => (
+                                                <Badge key={idx} variant="outline" className="text-xs">
+                                                    {amenity}
+                                                </Badge>
+                                            ))}
+                                            {room.amenities.length > 4 && (
+                                                <Badge variant="outline" className="text-xs">
+                                                    +{room.amenities.length - 4} more
+                                                </Badge>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex gap-2">
+                                            {room.features.slice(0, 4).map((Feature, idx) => (
+                                                <Feature key={idx} className="h-4 w-4 text-[#A67A35]" />
+                                            ))}
+                                        </div>
+                                        <Button
+                                            onClick={() => router.push(`/contact?id=${room.id}`)}
+                                            className="bg-[#A67A35] hover:bg-[#8c672d] text-black font-semibold">
+                                            Book Now
+                                        </Button>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     ))}
                 </Slider>
             </div>

@@ -6,6 +6,7 @@ import { Droplets, Moon, Waves } from 'lucide-react';
 import image from "@/public/Images/AllPhotos/DSC06389.webp";
 import image2 from "@/public/Images/AllPhotos/DSC06396.webp";
 import image3 from "@/public/Images/AllPhotos/DSC06434.webp";
+import { useRouter } from 'next/navigation';
 
 export default function HomeNaturalPool() {
   const sections = [
@@ -28,6 +29,8 @@ export default function HomeNaturalPool() {
       icon: Moon,
     },
   ];
+
+  const router = useRouter();
 
   return (
     <section className="py-10 md:py-[10vh] bg-[#FBF7F0]">
@@ -71,6 +74,7 @@ export default function HomeNaturalPool() {
                 </div>
                 <div className="mt-[3vh]">
                   <Button
+                    onClick={() => router.push('/natural-pool')}
                     variant="ghost"
                     className="text-royal-gold hover:text-white hover:bg-royal-gold border border-royal-gold w-full text-[4vw] md:text-[1vw] py-[1vw] px-[2vw]"
                   >

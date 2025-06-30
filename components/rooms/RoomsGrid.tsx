@@ -6,11 +6,14 @@ import { Wifi, Car, Coffee, Tv, Wind, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-
+import { useRouter } from 'next/navigation';
 const RoomsGrid = () => {
+
+  const router = useRouter();
 
   const rooms = [
     {
+      id: 1,
       title: 'Royal Suite',
       description: 'The pinnacle of luxury with panoramic mountain views, private balcony, and exclusive amenities.',
       image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -20,6 +23,7 @@ const RoomsGrid = () => {
       features: [Wifi, Car, Coffee, Tv, Wind, Users]
     },
     {
+      id: 2,
       title: 'Deluxe Villa',
       description: 'Spacious villa with separate living area, perfect for families or extended stays.',
       image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -29,6 +33,7 @@ const RoomsGrid = () => {
       features: [Wifi, Car, Coffee, Tv, Wind, Users]
     },
     {
+      id: 3,
       title: 'Garden Room',
       description: 'Elegant room overlooking our beautiful gardens, perfect for a romantic getaway.',
       image: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -38,6 +43,7 @@ const RoomsGrid = () => {
       features: [Wifi, Car, Coffee, Tv, Wind, Users]
     },
     {
+      id: 4,
       title: 'Wellness Suite',
       description: 'Specially designed for wellness enthusiasts with yoga space and spa amenities.',
       image: 'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -47,6 +53,7 @@ const RoomsGrid = () => {
       features: [Wifi, Car, Coffee, Tv, Wind, Users]
     },
     {
+      id: 5,
       title: 'Mountain View Room',
       description: 'Breathtaking mountain views from your private balcony with modern amenities.',
       image: 'https://images.pexels.com/photos/1834395/pexels-photo-1834395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -56,6 +63,7 @@ const RoomsGrid = () => {
       features: [Wifi, Car, Coffee, Tv, Wind, Users]
     },
     {
+      id: 6,
       title: 'Family Suite',
       description: 'Perfect for families with connecting rooms and child-friendly amenities.',
       image: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -130,7 +138,9 @@ const RoomsGrid = () => {
                           <Feature key={idx} className="h-4 w-4 text-royal-gold" />
                         ))}
                       </div>
-                      <Button className="bg-royal-gold hover:bg-royal-gold-dark text-black font-semibold">
+                      <Button
+                        onClick={() => router.push(`/contact?id=${room.id}`)}
+                        className="bg-royal-gold hover:bg-royal-gold-dark text-black font-semibold">
                         Book Now
                       </Button>
                     </div>
@@ -140,8 +150,8 @@ const RoomsGrid = () => {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   )
 }
 

@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Heart, Sparkles, Flower, Leaf } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function HomeWellness() {
+    const router = useRouter();
     return (
         <section className="md:py-[10vh] py-10 bg-[#A67A35]">
             <div className=" mx-auto px-6 md:px-[8vw]">
@@ -17,7 +17,7 @@ export default function HomeWellness() {
                     className="text-center mb-[10vh]"
                 >
                     <h2 className="text-[6vw] md:text-[2.8vw] font-playfair font-bold text-[#fff] leading-tight">
-                        Discover the <span className="text-white">Healing Power</span> of Wellness
+                        Discover the <span className="text-white">Healing Power </span>  of Wellness
                     </h2>
                     <p className="text-[2.3vh] md:text-[1.1vw] text-gray-200 mx-auto mt-4">
                         Immerse yourself in an oasis of serenity. Our wellness offerings combine ancient healing techniques with modern comfort to deliver a truly revitalizing experience.
@@ -75,7 +75,9 @@ export default function HomeWellness() {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="text-center mt-[8vh]"
                 >
-                    <Button className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1.2vw] rounded-full transition duration-200">
+                    <Button
+                        onClick={() => router.push("/wellness")}
+                        className="bg-[#3c2f23] hover:bg-[#2c241b] text-white text-[2.1vh] md:text-[1.2vw] font-medium px-8 py-3 md:px-[3vw] md:py-[1.2vw] rounded-full transition duration-200">
                         Explore Wellness
                     </Button>
                 </motion.div>

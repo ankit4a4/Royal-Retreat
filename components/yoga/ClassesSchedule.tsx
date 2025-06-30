@@ -120,10 +120,6 @@ const ClassesSchedule = () => {
                                                 <span className="text-sm text-gray-600">Instructor: {yogaClass.instructor}</span>
                                             </div>
                                         </div>
-
-                                        <Button className="w-full bg-royal-gold hover:bg-royal-gold-dark text-black font-semibold">
-                                            Reserve Spot
-                                        </Button>
                                     </CardContent>
                                 </Card>
                             </motion.div>

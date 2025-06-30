@@ -40,8 +40,8 @@ const Navbar = () => {
   const navItemsRight = [
     { name: 'Wellness', href: '/wellness' },
     { name: 'Yoga', href: '/yoga' },
-    { name: 'Natural Pool', href: '/#' },
-    { name: 'Contact', href: '/#' },
+    { name: 'Natural Pool', href: '/natural-pool' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
