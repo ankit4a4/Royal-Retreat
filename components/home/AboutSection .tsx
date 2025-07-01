@@ -39,7 +39,6 @@ const AboutSection = () => {
           “You don’t just stay here — <span className="text-[#C9A062] font-semibold not-italic">you return to yourself</span>. Every space is crafted to reconnect you with nature, with healing, and with peace.”
         </motion.blockquote>
 
-        {/* Founders Note */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
