@@ -22,7 +22,7 @@ export default function About() {
       />
       <StorySection />
       <ValuesSection />
-      <AwardsSection />
+      {/* <AwardsSection /> */}
     </>
   );
 }

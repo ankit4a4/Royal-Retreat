@@ -8,6 +8,7 @@ import HomeWellness from '@/components/home/HomeWellness';
 import HomeNaturalPool from '@/components/home/HomeNaturalPool';
 import HomeGallery from '@/components/home/HomeGallery';
 import Testimonials from '@/components/home/testimonials';
+import FacilitiesGrid from '@/components/home/FacilitiesGrid';
 
 export default function Home() {
   return (
@@ -26,7 +27,8 @@ export default function Home() {
       <AboutSection />
       <HomeWellness />
       <HomeRooms />
-      <HomeYoga />
+      {/* <HomeYoga /> */}
+      <FacilitiesGrid/>
       <HomeNaturalPool />
       <HomeGallery />
       <Testimonials />

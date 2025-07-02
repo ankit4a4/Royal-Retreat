@@ -52,17 +52,17 @@ export default function HomeWellness() {
                             <div className="w-full md:w-1/2">
                                 <h3 className="text-[4.8vw] md:text-[2vw] font-playfair font-bold text-[#3c2f23] mb-4">
                                     {index === 0
-                                        ? 'Signature Royal Treatments'
+                                        ? 'Signature Ayurvedic Rituals'
                                         : index === 1
-                                            ? 'Natural Healing Therapies'
-                                            : 'Holistic Body & Soul Revival'}
+                                            ? 'Ancient Healing Therapies'
+                                            : 'Body, Mind & Spirit Rejuvenation'}
                                 </h3>
-                                <p className="text-[2.2vh] md:text-[1.05vw] text-[#5c5344] leading-relaxed mb-4">
+                                <p className="text-[2vh] md:text-[1.05vw] text-[#5c5344] leading-relaxed mb-4">
                                     {index === 0
-                                        ? 'Indulge in our exclusive full-body therapies that blend essential oils, ancient massage techniques, and personalized attention to awaken your senses and restore inner peace.'
+                                        ? 'Experience our exclusive full-body Ayurvedic therapies, combining sacred oils, traditional Abhyanga massage, and personalized dosha balancing to awaken your senses and restore holistic harmony.'
                                         : index === 1
-                                            ? 'Let go of tension with heated stone rituals and herbal detoxifying wraps. Each treatment is a gateway to tranquility and rejuvenation inspired by nature.'
-                                            : 'Our sanctuary offers immersive experiences for body and soul — from meditation in serene gardens to revitalizing salt room therapies, all designed to help you reconnect and recharge.'}
+                                            ? 'Release deep-seated stress with warm Ayurvedic stone treatments and herbal detox wraps. Each therapy draws from centuries-old healing wisdom to bring you natural purification and profound renewal.'
+                                            : 'Step into our Ayurvedic sanctuary where tranquility meets tradition. From meditative garden walks to Himalayan salt chamber sessions, every element is crafted to align your energies and revitalize your inner being.'}
                                 </p>
                             </div>
                         </motion.div>

@@ -38,9 +38,9 @@ const Navbar = () => {
   ];
 
   const navItemsRight = [
-    { name: 'Wellness', href: '/wellness' },
+    { name: 'Atharava Wellness', href: '/wellness' },
     { name: 'Yoga', href: '/yoga' },
-    { name: 'Natural Pool', href: '/natural-pool' },
+    // { name: 'Natural Pool', href: '/natural-pool' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -51,10 +51,10 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
         ? 'bg-white backdrop-blur-sm shadow-lg'
-        : 'bg-transparent'
+        : ' backdrop-blur-sm bg-black/10'
         }`}
     >
-      <div className="mx-auto px-4 md:px-[4vw] md:py-[2vw] py-3 ">
+      <div className="mx-auto px-4 md:px-[10vw] md:py-[2vw] py-3 ">
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between relative">
           {/* Left Nav */}
@@ -63,7 +63,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${isScrolled ? 'text-black' : 'text-white'} font-medium hover:text-royal-gold transition-colors text-[1.3vw]`}
+                className={`${isScrolled ? 'text-black' : 'text-white'} font-normal hover:text-royal-gold transition-colors text-[1.3vw]`}
                 style={{
                   color: pathname === item.href ? '#d4af37' : ""
                 }}
@@ -82,7 +82,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${isScrolled ? 'text-black' : 'text-white'} font-medium hover:text-royal-gold transition-colors text-[1.3vw]`}
+                className={`${isScrolled ? 'text-black' : 'text-white'} font-normal hover:text-royal-gold transition-colors text-[1.3vw]`}
                 style={{
                   color: pathname === item.href ? '#d4af37' : ""
                 }}
@@ -153,7 +153,7 @@ const Navbar = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="py-2 px-3 rounded-md text-black text-[2.2vh] font-medium hover:bg-royal-gold/10 hover:text-royal-gold transition duration-300"
+                      className="py-2 px-3 rounded-md text-black text-[2.2vh] font-normal hover:bg-royal-gold/10 hover:text-royal-gold transition duration-300"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.name}
