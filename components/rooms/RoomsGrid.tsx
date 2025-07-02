@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Wifi, Car, Coffee, Tv, Wind, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import mudimage from "../../public/Images/AllPhotos/mud-house.webp";
+import gardenView from "../../public/Images/AllPhotos/gardenView.webp";
+import mountainView from "../../public/Images/AllPhotos/mountainView.webp"
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 const RoomsGrid = () => {
@@ -13,65 +16,84 @@ const RoomsGrid = () => {
 
   const rooms = [
     {
-      id: 1,
-      title: 'Royal Suite',
-      description: 'The pinnacle of luxury with panoramic mountain views, private balcony, and exclusive amenities.',
-      image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹99,999',
-      capacity: '2 Adults',
-      amenities: ['Private Balcony', 'King Size Bed', 'Jacuzzi', 'Butler Service', 'Mountain View', 'Mini Bar'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
-    },
-    {
       id: 2,
-      title: 'Deluxe Villa',
-      description: 'Spacious villa with separate living area, perfect for families or extended stays.',
-      image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹66,999',
-      capacity: '4 Adults',
-      amenities: ['Living Room', 'Kitchen', 'Garden View', 'Private Pool', 'Terrace', 'Dining Area'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+      title: "Mud Houses",
+      description:
+        "Experience rustic charm in our traditional mud house, featuring a separate living area and ample space.",
+      image: mudimage,
+      price: "₹6,999",
+      capacity: "2 Adults",
+      amenities: ["Living Room", "Garden View", "Dining Area"],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users],
     },
     {
       id: 3,
-      title: 'Garden Room',
-      description: 'Elegant room overlooking our beautiful gardens, perfect for a romantic getaway.',
-      image: 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹37,999',
-      capacity: '2 Adults',
-      amenities: ['Garden View', 'Queen Bed', 'Marble Bathroom', 'Balcony', 'Work Desk', 'Safe'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+      title: "Garden Room",
+      description:
+        "Elegant room overlooking our beautiful gardens, perfect for a peaceful getaway.",
+      image: gardenView,
+      price: "₹3,999",
+      capacity: "2 Adults",
+      amenities: [
+        "Garden View",
+        "Queen Bed",
+        "Marble Bathroom",
+
+        "Work Desk",
+        "Safe",
+      ],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users],
     },
     {
       id: 4,
-      title: 'Wellness Suite',
-      description: 'Specially designed for wellness enthusiasts with yoga space and spa amenities.',
-      image: 'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹53,999',
-      capacity: '2 Adults',
-      amenities: ['Yoga Mat', 'Meditation Corner', 'Aromatherapy', 'Spa Products', 'Sound System', 'Healthy Minibar'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+      title: "Wellness Suite",
+      description:
+        "Specially designed for wellness enthusiasts with yoga space and spa amenities.",
+      image:
+        "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      price: "₹5,999",
+      capacity: "2 Adults",
+      amenities: ["Yoga Mat", "Meditation Corner", "Tv", "Sound System"],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users],
     },
     {
       id: 5,
-      title: 'Mountain View Room',
-      description: 'Breathtaking mountain views from your private balcony with modern amenities.',
-      image: 'https://images.pexels.com/photos/1834395/pexels-photo-1834395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹41,999',
-      capacity: '2 Adults',
-      amenities: ['Mountain View', 'Balcony', 'King Bed', 'Sitting Area', 'Premium Linens', 'Room Service'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
+      title: "Mountain View Room",
+      description:
+        "Breathtaking mountain views from your private balcony with modern amenities.",
+      image:
+       mountainView,
+      price: "₹4,999",
+      capacity: "2 Adults",
+      amenities: [
+        "Mountain View",
+        "Balcony",
+        "King Bed",
+        "Sitting Area",
+        "Premium Linens",
+        "Room Service",
+      ],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users],
     },
-    {
-      id: 6,
-      title: 'Family Suite',
-      description: 'Perfect for families with connecting rooms and child-friendly amenities.',
-      image: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      price: '₹62,999',
-      capacity: '4 Adults + 2 Children',
-      amenities: ['Connecting Rooms', 'Play Area', 'Child Safety', 'Family Dining', 'Entertainment', 'Babysitting'],
-      features: [Wifi, Car, Coffee, Tv, Wind, Users]
-    }
+    // {
+    //   id: 6,
+    //   title: "Family Suite",
+    //   description:
+    //     "Perfect for families with connecting rooms and child-friendly amenities.",
+    //   image:
+    //     "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    //   price: "₹6,999",
+    //   capacity: "2 Adults + 2 Children",
+    //   amenities: [
+    //     "Connecting Rooms",
+    //     "Play Area",
+    //     "Child Safety",
+    //     "Family Dining",
+    //     "Entertainment",
+    //     "Babysitting",
+    //   ],
+    //   features: [Wifi, Car, Coffee, Tv, Wind, Users],
+    // },
   ];
 
   return (

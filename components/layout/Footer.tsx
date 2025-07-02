@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from "@/public/logo.png"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/logo.png";
 
 import {
   Crown,
@@ -13,7 +13,7 @@ import {
   Instagram,
   Facebook,
   Twitter,
-} from 'lucide-react';
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -28,7 +28,11 @@ const Footer = () => {
             className="space-y-[2vh]"
           >
             <Link href="/" className="flex items-center space-x-[1vw]">
-              <Image src={logo} alt="Logo" className=" object-contain h-[100px] " />
+              <Image
+                src={logo}
+                alt="Logo"
+                className=" object-contain h-[100px] "
+              />
             </Link>
             <p className="text-gray-400 text-[3.5vw] md:text-[1.1vw] leading-relaxed">
               Experience luxury and tranquility in our world-class resort, where
@@ -48,11 +52,11 @@ const Footer = () => {
             </h3>
             <ul className="space-y-[1vh]">
               {[
-                { name: 'About Us', href: '/about' },
-                { name: 'Rooms & Suites', href: '/rooms' },
-                { name: 'Wellness Center', href: '/' },
-                { name: 'Yoga Sessions', href: '/' },
-                { name: 'Contact', href: '/' },
+                { name: "About Us", href: "/about" },
+                { name: "Rooms & Suites", href: "/rooms" },
+                { name: "Wellness Center", href: "/" },
+                { name: "Yoga Sessions", href: "/" },
+                { name: "Contact", href: "/" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -80,19 +84,20 @@ const Footer = () => {
               <div className="flex items-center space-x-[1vw]">
                 <MapPin className="h-[4vw] w-[4vw] md:h-[1.2vw] md:w-[1.2vw] text-royal-gold" />
                 <span className="text-gray-400 text-[3.5vw] md:text-[1.1vw]">
-                  Palm bliss, Luxury Resort District, Paradise Valley
+                  Khasra No 20, Siron, Road Village Mauja, Chauki, Thano,
+                  Uttarakhand 248143
                 </span>
               </div>
               <div className="flex items-center space-x-[1vw]">
                 <Phone className="h-[4vw] w-[4vw] md:h-[1.2vw] md:w-[1.2vw] text-royal-gold" />
                 <span className="text-gray-400 text-[3.5vw] md:text-[1.1vw]">
-                  +1 (555) 123-4567
+                  +91 906 888 5323
                 </span>
               </div>
               <div className="flex items-center space-x-[1vw]">
                 <Mail className="h-[4vw] w-[4vw] md:h-[1.2vw] md:w-[1.2vw] text-royal-gold" />
                 <span className="text-gray-400 text-[3.5vw] md:text-[1.1vw]">
-                  info@Palmbliss.com
+                  thepalmblissresort@gmail.com
                 </span>
               </div>
             </div>
@@ -110,9 +115,9 @@ const Footer = () => {
             </h3>
             <div className="flex space-x-[2vw]">
               {[
-                { icon: Instagram, href: '#' },
-                { icon: Facebook, href: '#' },
-                { icon: Twitter, href: '#' },
+                { icon: Instagram, href: "#" },
+                { icon: Facebook, href: "#" },
+                { icon: Twitter, href: "#" },
               ].map((social, index) => (
                 <Link
                   key={index}
@@ -124,7 +129,8 @@ const Footer = () => {
               ))}
             </div>
             <p className="text-gray-400 text-[3vw] md:text-[1vw]">
-              Stay connected for exclusive offers and updates from Palm Bliss Resort.
+              Stay connected for exclusive offers and updates from Palm Bliss
+              Resort.
             </p>
           </motion.div>
         </div>
@@ -137,9 +143,15 @@ const Footer = () => {
           className="border-t border-gray-800 mt-[6vh] pt-[3vh] text-center"
         >
           <p className="text-white font-[600] text-[3.5vw] md:text-[1vw] pb-5 md:pb-[1vw]">
-            © 2025 Palm Bliss Resort. All rights reserved.  Powered by <span style={{
-              color: "#DD2C2B"
-            }}>Rank</span>mantra
+            © 2025 Palm Bliss Resort. All rights reserved. Powered by{" "}
+            <span
+              style={{
+                color: "#DD2C2B",
+              }}
+            >
+              Rank
+            </span>
+            mantra
           </p>
         </motion.div>
       </div>

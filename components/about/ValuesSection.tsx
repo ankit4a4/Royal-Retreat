@@ -2,32 +2,32 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Crown, Award, Users, Sparkles } from 'lucide-react';
+import { Flower, HeartPulse, Smile, Leaf } from 'lucide-react';
 
 const values = [
   {
-    icon: Crown,
-    title: 'Luxury Redefined',
+    icon: Flower,
+    title: 'Holistic Wellness',
     description:
-      'We believe luxury is not just about opulence, but about creating meaningful experiences that touch the soul.',
+      'We embrace a mind-body-spirit approach, offering therapies and practices that restore balance and harmony.',
   },
   {
-    icon: Award,
-    title: 'Excellence in Service',
+    icon: HeartPulse,
+    title: 'Stress-Free Living',
     description:
-      'Our commitment to exceptional service ensures every guest feels like royalty from arrival to departure.',
+      'Palm Bliss is a sanctuary designed to release tension, reduce anxiety, and promote inner peace through nature and Ayurvedic care.',
   },
   {
-    icon: Users,
-    title: 'Personalized Experience',
+    icon: Smile,
+    title: 'Calm & Comfort',
     description:
-      'Every stay is tailored to your preferences, creating memories that last a lifetime.',
+      'Every experience is crafted to make you feel cared for, calm, and completely at ease — your well-being is our priority.',
   },
   {
-    icon: Sparkles,
-    title: 'Sustainable Luxury',
+    icon: Leaf,
+    title: 'Nature-Aligned Healing',
     description:
-      'We harmonize luxury with environmental responsibility, preserving nature for future generations.',
+      'We practice sustainability and healing through natural remedies, eco-living, and earth-conscious choices.',
   },
 ];
 
@@ -44,7 +44,7 @@ const ValuesSection = () => (
           Our <span className="text-white/80 drop-shadow-md">Core Values</span>
         </h2>
         <p className="text-lg text-white/90 max-w-2xl mx-auto">
-          What sets Palm Bliss apart in experience, service, and sustainability.
+          Rooted in wellness, nature, and inner balance — the essence of Palm Bliss.
         </p>
       </motion.div>
 

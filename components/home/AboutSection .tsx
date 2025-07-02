@@ -23,7 +23,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-[2.6vh] md:text-[1.2vw] text-[#5c5344] leading-relaxed mx-auto"
+          className="text-[2vh] md:text-[1.2vw] text-[#5c5344] leading-relaxed mx-auto"
         >
           Nestled in the sacred foothills of the Himalayas, our retreat is more than a place — it’s an experience.
           Discover inner balance through the timeless wisdom of Ayurveda, pristine nature, and soulful living. Whether you're seeking physical rejuvenation, mental clarity, or spiritual awakening, every element here is aligned to support your transformation.
@@ -34,7 +34,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="border-l-[0.3vw] border-[#C9A062] bg-[#fff8ec] text-[#4a3b2a] p-6 md:p-8 rounded-md shadow-sm text-[2.4vh] md:text-[1.1vw] italic mx-auto"
+          className="border-l-[0.3vw] border-[#C9A062] bg-[#fff8ec] text-[#4a3b2a] p-6 md:p-8 rounded-md shadow-sm text-[2vh] md:text-[1.1vw] italic mx-auto"
         >
           “You don’t just stay here — <span className="text-[#C9A062] font-semibold not-italic">you return to yourself</span>. Every space is crafted to reconnect you with nature, with healing, and with peace.”
         </motion.blockquote>
@@ -43,7 +43,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-[2.5vh] md:text-[1.15vw] text-[#4a3b2a] leading-relaxed mx-auto"
+          className="text-[2vh] md:text-[1.15vw] text-[#4a3b2a] leading-relaxed mx-auto"
         >
           Founded by <strong>Parth Shivani</strong> and <strong>Kamlesh Singh</strong>, the retreat is built on the
           foundations of holistic healing, conscious design, and a deep reverence for ancient Ayurvedic wisdom. Our vision
