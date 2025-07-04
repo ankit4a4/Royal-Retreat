@@ -40,14 +40,13 @@ const StorySection = () => (
           <div className="bg-white/80 backdrop-blur-md border border-[#E8D5B5] p-8 rounded-xl shadow-lg h-full">
             <h3 className="text-xl font-semibold text-[#333333] mb-6 flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#C0A46B]" />
-              About Us
+              Reconnect, Rejuvenate, Realign.
             </h3>
             <p className="text-[#555555] leading-relaxed mb-6">
-              Nestled in the sacred foothills of the Himalayas, our retreat is more than a place — it’s an experience.
-              Discover inner balance through the timeless wisdom of Ayurveda, pristine nature, and soulful living.
+              Step into a sanctuary where profound healing begins from within. Our retreat is a soulful journey blending mindfulness, movement, nourishing nutrition, and deep emotional well-being. 
             </p>
             <p className="text-[#8A6D3B] font-medium mb-6">
-              Whether you seek physical rejuvenation, mental clarity, or spiritual awakening, every element here aligns to support your transformation.
+              Through expertly guided sessions, immersive experiences in nature, and the power of community, we invite you to explore the full spectrum of what it truly means to feel whole—not just healthy.
             </p>
             <div className="relative pl-8">
               <Quote className="absolute left-0 top-0 w-6 h-6 text-[#333333]" />
@@ -56,7 +55,7 @@ const StorySection = () => (
               </blockquote>
               <div className="flex gap-2 items-center mt-4">
                 <div className="w-1 h-8 bg-[#8A6D3B] rounded-full"></div>
-                <span className="text-[#8A6D3B] font-medium">Parth Shivani & Kamlesh Singh</span>
+                <span className="text-[#8A6D3B] font-medium">The Palm Bliss</span>
               </div>
             </div>
           </div>

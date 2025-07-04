@@ -5,29 +5,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Flower, HeartPulse, Smile, Leaf } from 'lucide-react';
 
 const values = [
-  {
-    icon: Flower,
-    title: 'Holistic Wellness',
-    description:
-      'We embrace a mind-body-spirit approach, offering therapies and practices that restore balance and harmony.',
-  },
-  {
-    icon: HeartPulse,
-    title: 'Stress-Free Living',
-    description:
-      'Palm Bliss is a sanctuary designed to release tension, reduce anxiety, and promote inner peace through nature and Ayurvedic care.',
-  },
+  // {
+  //   icon: Flower,
+  //   title: 'Holistic Wellness',
+  //   description:
+  //     'We embrace a mind-body-spirit approach, offering therapies and practices that restore balance and harmony.',
+  // },
+{
+  icon: HeartPulse, 
+  title: 'Stress-Free Living',
+  description:
+    'Step into a world where time slows down and serenity takes over. At a wellness retreat, stress-free living means waking up to the sounds of nature, moving gently through yoga or meditation, and nourishing your body with wholesome meals prepared with care. There\'s no rush, no pressure—just space to breathe, reflect, and heal.Here, your mind unwinds, your body restores, and your soul reconnects. Digital distractions fade, replaced by deep rest, mindful practices, and heart-centered community. Every moment invites you to live lightly, joyfully, and with intention.It’s not just a break—it’s a gentle reset to help you return to your life more centered, more grounded, and more you.',
+},
   {
     icon: Smile,
-    title: 'Calm & Comfort',
+    title: 'Calm & Comfort: A Mud-House Escape',
     description:
-      'Every experience is crafted to make you feel cared for, calm, and completely at ease — your well-being is our priority.',
+      'Tucked away from the rush of the world, there’s a quiet kind of magic in mud houses. Earthy, grounding, and deeply peaceful — they hold the soul of wellness retreats.Step inside, and the walls breathe coolness. The air feels soft, the silence kind. No harsh edges, no loud colors — just the gentle hum of nature. Mud homes aren’t just structures; they’re sanctuaries built from the earth itself.Here, calm isn’t an idea — it’s a feeling. You wake up to birdsong, stretch under open skies, and let time slow down. The comfort isn’t from luxury, but from simplicity. Natural materials, soft lighting, and cozy corners make you feel held — like home, but lighter.In a world that runs fast, the mud house reminds you how to pause. How to listen to your breath. How to just be.And that’s the gift of this wellness retreat — calm and comfort, one breath at a time.',
   },
   {
     icon: Leaf,
     title: 'Nature-Aligned Healing',
     description:
-      'We practice sustainability and healing through natural remedies, eco-living, and earth-conscious choices.',
+      'Where the rhythm of nature meets the stillness within — discover healing, grounded in earth and soul, at our wellness retreat."',
   },
 ];
 

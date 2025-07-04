@@ -24,13 +24,13 @@ const systems = [
     description:
       "Unite breath, posture, and awareness through guided yoga and naturopathic techniques. These natural, non-invasive methods aim to strengthen the body’s innate healing mechanisms.",
   },
-  {
-    title: "Homeopathy",
-    image:
-      "https://images.unsplash.com/photo-1648455321715-e8ed86188c0e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9tZW9wYXRoeXxlbnwwfHwwfHx8MA%3D%3D",
-    description:
-      "Discover gentle healing through highly individualized remedies. Homeopathy addresses the root cause of illness, promoting emotional and physical harmony.",
-  },
+  // {
+  //   title: "Homeopathy",
+  //   image:
+  //     "https://images.unsplash.com/photo-1648455321715-e8ed86188c0e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9tZW9wYXRoeXxlbnwwfHwwfHx8MA%3D%3D",
+  //   description:
+  //     "Discover gentle healing through highly individualized remedies. Homeopathy addresses the root cause of illness, promoting emotional and physical harmony.",
+  // },
   {
     title: "Herbal Detox",
     image:
