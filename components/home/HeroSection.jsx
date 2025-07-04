@@ -6,15 +6,11 @@ import { CalendarDays } from "lucide-react";
 import BlurText from "../ui/BlurText";
 import RotatingText from "../ui/RotatingText";
 
-type HeroSectionProps = {
-  welcomeHeading: string;
-  subtitle?: string;
-};
-
+// Removed TypeScript type definition for props
 const HeroSection = ({
   welcomeHeading,
   subtitle = "The Palm Bliss",
-}: HeroSectionProps) => {
+}) => {
   const [showMobileForm, setShowMobileForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -26,7 +22,8 @@ const HeroSection = ({
     children: 0,
   });
 
-  const handleChange = (e: any) => {
+  // Removed TypeScript type for event parameter
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -34,13 +31,16 @@ const HeroSection = ({
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  // Removed TypeScript type for event parameter
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
+
   const handleAnimationComplete = () => {
     console.log("Animation completed!");
   };
+
   return (
     <section className="relative md:min-h-screen min-h-[80vh] flex flex-col justify-end">
       {/* Background Video */}
@@ -68,14 +68,6 @@ const HeroSection = ({
           {welcomeHeading}
         </motion.h1>
 
-        {/* <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="text-white text-[1.2vh] md:text-[1vw] font-medium drop-shadow-md"
-        >
-          To
-        </motion.p> */}
         <div className="flex justify-center items-center">
           <BlurText
             text="The Palm Bliss"
@@ -83,7 +75,7 @@ const HeroSection = ({
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-3xl mb-2  text-white font-playfair tracking-widest"
+            className="text-3xl mb-2 text-white font-playfair tracking-widest"
           />
         </div>
         <RotatingText
@@ -152,6 +144,7 @@ const HeroSection = ({
               <input
                 type={type}
                 name={name}
+                value={formData[name]} // Added value prop for controlled component
                 onChange={handleChange}
                 placeholder={placeholder}
                 className="bg-transparent border-b border-white/30 focus:border-[#c1a47a] placeholder:text-white/40 focus:outline-none transition-all text-[1.5vh] md:text-[1vw]"
@@ -175,6 +168,7 @@ const HeroSection = ({
                 <input
                   type="date"
                   name={name}
+                  value={formData[name]} // Added value prop for controlled component
                   onChange={handleChange}
                   className="bg-transparent w-full text-white placeholder:text-white/40 focus:outline-none text-[1.5vh] md:text-[1vw]"
                 />
@@ -198,6 +192,7 @@ const HeroSection = ({
               </label>
               <select
                 name={name}
+                value={formData[name]} // Added value prop for controlled component
                 onChange={handleChange}
                 className="bg-transparent border-b border-white/30 text-white focus:outline-none appearance-none text-[1.5vh] md:text-[1vw]"
               >

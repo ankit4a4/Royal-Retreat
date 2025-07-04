@@ -14,10 +14,6 @@ export default function About() {
   return (
     <>
       <HeroSection
-        texts={[
-          'ABOUT US',
-          'Palm Bliss',
-        ]}
         welcomeHeading="ABOUT US"
       />
       <StorySection />

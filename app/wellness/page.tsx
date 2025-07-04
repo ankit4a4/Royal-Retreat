@@ -9,10 +9,7 @@ export default function Wellness() {
   return (
     <div>
       <HeroSection
-        texts={[
-          'WELLNESS',
-          'Palm Bliss',
-        ]}
+       
         welcomeHeading="WELLNESS"
       />
       <AyushWellnessSection/>

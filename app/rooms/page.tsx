@@ -12,10 +12,7 @@ export default function Rooms() {
     <div>
       {/* Hero Section */}
       <HeroSection
-        texts={[
-          'ROOMS',
-          'Palm Bliss',
-        ]}
+      
         welcomeHeading="ROOMS"
       />
 
