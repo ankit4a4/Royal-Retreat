@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import mudimage from "../../public/Images/AllPhotos/mud-house.webp";
 import gardenView from "../../public/Images/AllPhotos/gardenView.webp";
 import mountainView from "../../public/Images/AllPhotos/mountainView.webp"
+import swiss from "../../public/Images/AllPhotos/swiss.webp"
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 const RoomsGrid = () => {
@@ -46,11 +47,11 @@ const RoomsGrid = () => {
     },
     {
       id: 4,
-      title: "Wellness Suite",
+      title: "Swiss Cottages",
       description:
-        "Specially designed for wellness enthusiasts with yoga space and spa amenities.",
+        "Relax in our luxurious Swiss cottages, where you'll find a comfortable bed, mini-bar, exclusive experiences, a personalized return gift, and all modern amenities.",
       image:
-        "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+       swiss,
       price: "₹5,999",
       capacity: "2 Adults",
       amenities: ["Yoga Mat", "Meditation Corner", "Tv", "Sound System"],

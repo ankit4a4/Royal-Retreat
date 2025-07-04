@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import image1 from "@/public/Images/AllPhotos/DSC06396.webp";
 import image2 from "@/public/Images/AllPhotos/DSC06521.webp";
 import image3 from "@/public/Images/AllPhotos/DSC06399.webp";
+import swiss from "../../public/Images/AllPhotos/swiss.webp"
 import mudimage from "../../public/Images/AllPhotos/mud-house.webp";
 import gardenView from "../../public/Images/AllPhotos/gardenView.webp";
 import mountainView from "../../public/Images/AllPhotos/mountainView.webp"
@@ -50,18 +51,18 @@ const RoomsSection = () => {
       ],
       features: [Wifi, Car, Coffee, Tv, Wind, Users],
     },
-    // {
-    //   id: 4,
-    //   title: "Wellness Suite",
-    //   description:
-    //     "Specially designed for wellness enthusiasts with yoga space and spa amenities.",
-    //   image:
-    //     "https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    //   price: "₹5,999",
-    //   capacity: "2 Adults",
-    //   amenities: ["Yoga Mat", "Meditation Corner", "Tv", "Sound System"],
-    //   features: [Wifi, Car, Coffee, Tv, Wind, Users],
-    // },
+     {
+      id: 4,
+      title: "Swiss Cottages",
+      description:
+        "Relax in our luxurious Swiss cottages, where you'll find a comfortable bed, mini-bar, exclusive experiences, a personalized return gift, and all modern amenities.",
+      image:
+       swiss,
+      price: "₹5,999",
+      capacity: "2 Adults",
+      amenities: ["Yoga Mat", "Meditation Corner", "Tv", "Sound System"],
+      features: [Wifi, Car, Coffee, Tv, Wind, Users],
+    },
     {
       id: 5,
       title: "Mountain View Room",
