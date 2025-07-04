@@ -13,10 +13,7 @@ export default function NaturalPool() {
     <>
       {/* Hero Section */}
       <HeroSection
-        texts={[
-          'NATURAL POOL',
-          'Palm Bliss',
-        ]}
+        
         welcomeHeading="NATURAL POOL"
       />
 

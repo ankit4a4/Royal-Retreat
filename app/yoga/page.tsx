@@ -11,10 +11,7 @@ export default function Yoga() {
 
     <>
       <HeroSection
-        texts={[
-          'YOGA',
-          'Palm Bliss',
-        ]}
+       
         welcomeHeading="YOGA"
       />
       <div className="min-h-screen pt-20">
