@@ -1,54 +1,26 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { CalendarDays } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { CalendarDays } from "lucide-react";
+import BlurText from "../ui/BlurText";
+import RotatingText from "../ui/RotatingText";
 
 type HeroSectionProps = {
-  texts: string[];
   welcomeHeading: string;
+  subtitle?: string;
 };
 
-const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
+const HeroSection = ({
+  welcomeHeading,
+  subtitle = "The Palm Bliss",
+}: HeroSectionProps) => {
   const [showMobileForm, setShowMobileForm] = useState(false);
-
-  // Typewriter Logic
-  const [lineIndex, setLineIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [currentText, setCurrentText] = useState('');
-  const [typingLine, setTypingLine] = useState(0);
-
-  useEffect(() => {
-    if (!texts || texts.length === 0 || !texts[lineIndex]) return;
-
-    const text = texts[lineIndex];
-    if (charIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setCurrentText((prev) => prev + text[charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
-    } else {
-      const timeout = setTimeout(() => {
-        setCharIndex(0);
-        setCurrentText('');
-        if (lineIndex === 0) {
-          setLineIndex(1);
-          setTypingLine(1);
-        } else {
-          setLineIndex((prev) => (prev + 1 < texts.length ? prev + 1 : 1));
-        }
-      }, 2000);
-      return () => clearTimeout(timeout);
-    }
-  }, [charIndex, lineIndex, texts]);
-
-  // Form State
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    arrival: '',
-    departure: '',
+    name: "",
+    phone: "",
+    arrival: "",
+    departure: "",
     rooms: 1,
     adults: 1,
     children: 0,
@@ -64,9 +36,11 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
-
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
   return (
     <section className="relative md:min-h-screen min-h-[80vh] flex flex-col justify-end">
       {/* Background Video */}
@@ -77,42 +51,66 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover brightness-75"
       >
-        <source
-          src="/Images/Home/herosection.mp4"
-          type="video/mp4"
-        />
+        <source src="/Images/Home/herosection.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/0 z-0"></div>
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      {/* Typewriter Heading */}
+      {/* Heading & Subtitle */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4">
-        {typingLine === 0 ? (
-          <h1 className="text-white text-[6vw] md:text-[4vw] font-bold drop-shadow-lg">
-            {currentText}
-            <span className="animate-pulse">|</span>
-          </h1>
-        ) : (
-          <>
-            <h1 className="text-white text-[6vh] md:text-[5vw] font-bold drop-shadow-lg">
-              {welcomeHeading}
-            </h1>
-            <p className="text-white text-[2vh] md:text-[2vw] font-medium mt-2 drop-shadow-md">
-              {currentText}
-              <span className="animate-pulse">|</span>
-            </p>
-          </>
-        )}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-white text-[8vh] md:text-[8vw] font-bold drop-shadow-lg"
+        >
+          {welcomeHeading}
+        </motion.h1>
+
+        {/* <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-white text-[1.2vh] md:text-[1vw] font-medium drop-shadow-md"
+        >
+          To
+        </motion.p> */}
+        <div className="flex justify-center items-center">
+          <BlurText
+            text="The Palm Bliss"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-3xl mb-2  text-white font-playfair tracking-widest"
+          />
+        </div>
+        <RotatingText
+          texts={[
+            "Atharva Ayurvedic",
+            "Boutique Wellness Retreat",
+            "Where Healing Begins Within",
+          ]}
+          mainClassName="px-2 sm:px-2 md:px-3 bg-yellow-600/20 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+          staggerFrom={"last"}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-120%" }}
+          staggerDuration={0.035}
+          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+          transition={{ type: "spring", damping: 60, stiffness: 400 }}
+          rotationInterval={3000}
+        />
       </div>
 
-      {/* Mobile Form Toggle */}
+      {/* Mobile Toggle */}
       <div className="md:hidden z-10 px-[4vh] pb-[4vh]">
         <button
           onClick={() => setShowMobileForm(!showMobileForm)}
           className="w-full bg-[#c1a47a] text-black font-bold text-[2.2vh] py-[2.2vh] rounded-md tracking-wide"
         >
-          {showMobileForm ? 'Close Form' : 'Enquire Now'}
+          {showMobileForm ? "Close Form" : "Enquire Now"}
         </button>
       </div>
 
@@ -121,8 +119,9 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className={`z-10 w-full max-w-[94vw] mx-auto px-[2vh] md:px-[2vw] pb-[4vh] md:pb-[4vh] ${showMobileForm ? 'block' : 'hidden'
-          } md:block`}
+        className={`z-10 w-full max-w-[94vw] mx-auto px-[2vh] md:px-[2vw] pb-[4vh] md:pb-[4vh] ${
+          showMobileForm ? "block" : "hidden"
+        } md:block`}
       >
         <form
           onSubmit={handleSubmit}
@@ -130,11 +129,26 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
         >
           {/* Name & Phone */}
           {[
-            { label: 'Name', name: 'name', type: 'text', placeholder: 'Your Name' },
-            { label: 'Phone', name: 'phone', type: 'tel', placeholder: 'Phone Number' },
+            {
+              label: "Name",
+              name: "name",
+              type: "text",
+              placeholder: "Your Name",
+            },
+            {
+              label: "Phone",
+              name: "phone",
+              type: "tel",
+              placeholder: "Phone Number",
+            },
           ].map(({ label, name, type, placeholder }) => (
-            <div key={name} className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]">
-              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">{label}</label>
+            <div
+              key={name}
+              className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]"
+            >
+              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">
+                {label}
+              </label>
               <input
                 type={type}
                 name={name}
@@ -147,11 +161,16 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
 
           {/* Arrival & Departure */}
           {[
-            { label: 'Arrival', name: 'arrival' },
-            { label: 'Departure', name: 'departure' },
+            { label: "Arrival", name: "arrival" },
+            { label: "Departure", name: "departure" },
           ].map(({ label, name }) => (
-            <div key={name} className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]">
-              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">{label}</label>
+            <div
+              key={name}
+              className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]"
+            >
+              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">
+                {label}
+              </label>
               <div className="flex items-center border-b border-white/30">
                 <input
                   type="date"
@@ -164,14 +183,19 @@ const HeroSection = ({ texts, welcomeHeading }: HeroSectionProps) => {
             </div>
           ))}
 
-          {/* Rooms, Adults, Children */}
+          {/* Dropdowns */}
           {[
-            { label: 'Rooms', name: 'rooms', options: [1, 2, 3, 4] },
-            { label: 'Adults', name: 'adults', options: [1, 2, 3, 4] },
-            { label: 'Children', name: 'children', options: [0, 1, 2, 3] },
+            { label: "Rooms", name: "rooms", options: [1, 2, 3, 4] },
+            { label: "Adults", name: "adults", options: [1, 2, 3, 4] },
+            { label: "Children", name: "children", options: [0, 1, 2, 3] },
           ].map(({ label, name, options }) => (
-            <div key={name} className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]">
-              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">{label}</label>
+            <div
+              key={name}
+              className="bg-black/60 px-[2vh] py-[2vh] md:px-[2vw] md:py-[1vw] flex flex-col gap-[1vh] md:gap-[1vw]"
+            >
+              <label className="text-white/80 text-[1.4vh] md:text-[1vw]">
+                {label}
+              </label>
               <select
                 name={name}
                 onChange={handleChange}
