@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import Link from 'next/link';
-import { Menu, X, Crown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { usePathname } from 'next/navigation';
-import logo from "@/public/logo.png"
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { Menu, X, Crown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import logo from "@/public/logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,29 +19,33 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   }, [isMobileMenuOpen]);
 
   const navItemsLeft = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Rooms', href: '/rooms' },
+    { name: "Home", href: "/" },
+    { name: "Our Legecy", href: "/about" },
+    { name: "Accomidation", href: "/rooms" },
+    { name: "Ayush Dining", href: "/wellness" },
   ];
 
   const navItemsRight = [
-    { name: 'Atharava Wellness', href: '/wellness' },
-    { name: 'Yoga', href: '/yoga' },
+    { name: "Ayush Wellness", href: "/wellness" },
+    { name: "Wellness Packages", href: "/wellness" },
+
+    // { name: 'Ayush Wellness', href: '/yoga' },
     // { name: 'Natural Pool', href: '/natural-pool' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Gallery", href: "/contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -49,10 +53,11 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white backdrop-blur-sm shadow-lg'
-        : ' backdrop-blur-sm bg-black/10'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white backdrop-blur-sm shadow-lg"
+          : " backdrop-blur-sm bg-black/10"
+      }`}
     >
       <div className="mx-auto px-4 md:px-[10vw] md:py-[2vw] py-3 ">
         {/* Desktop Nav */}
@@ -63,9 +68,11 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${isScrolled ? 'text-black' : 'text-white'} font-normal hover:text-royal-gold transition-colors text-[1.3vw]`}
+                className={`${
+                  isScrolled ? "text-black" : "text-white"
+                } font-normal hover:text-royal-gold transition-colors text-[1vw]`}
                 style={{
-                  color: pathname === item.href ? '#d4af37' : ""
+                  color: pathname === item.href ? "#d4af37" : "",
                 }}
               >
                 {item.name}
@@ -74,7 +81,11 @@ const Navbar = () => {
           </div>
 
           {/* Logo Center */}
-          <Image src={logo} alt="Logo" className="absolute left-1/2 transform -translate-x-1/2 md:h-[230%] object-contain" />
+          <Image
+            src={logo}
+            alt="Logo"
+            className="absolute left-1/2 transform -translate-x-1/2 md:h-[230%] object-contain"
+          />
 
           {/* Right Nav */}
           <div className="flex items-center z-10 space-x-6 md:space-x-[2vw]">
@@ -82,9 +93,11 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`${isScrolled ? 'text-black' : 'text-white'} font-normal hover:text-royal-gold transition-colors text-[1.3vw]`}
+                className={`${
+                  isScrolled ? "text-black" : "text-white"
+                } font-normal hover:text-royal-gold transition-colors text-[1vw]`}
                 style={{
-                  color: pathname === item.href ? '#d4af37' : ""
+                  color: pathname === item.href ? "#d4af37" : "",
                 }}
               >
                 {item.name}
@@ -96,13 +109,19 @@ const Navbar = () => {
         {/* Mobile Nav Header */}
         <div className="md:hidden flex items-center justify-between">
           <Link href="/" className="flex items-center justify-start gap-1 ">
-            <Image src={logo} alt="Logo" className="absolute left-[12%] transform -translate-x-1/2 w-[30%] object-contain" />
+            <Image
+              src={logo}
+              alt="Logo"
+              className="absolute left-[12%] transform -translate-x-1/2 w-[30%] object-contain"
+            />
           </Link>
 
           <Button
             variant="ghost"
             size="icon"
-            className={`${isScrolled ? 'text-black' : 'text-white'} hover:text-royal-gold`}
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-royal-gold`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -130,15 +149,19 @@ const Navbar = () => {
               {/* Slide-in Menu */}
               <motion.div
                 key="menu"
-                initial={{ x: '-100%' }}
+                initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
-                exit={{ x: '-100%' }}
-                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="fixed top-0 left-0 z-[100] min-h-screen w-[80vw] max-w-sm bg-white shadow-xl p-6 flex flex-col gap-4"
               >
                 <div className="flex justify-between items-center mb-4">
                   <Link href="/" className="flex items-center gap-1 ">
-                    <Image src={logo} alt="Logo" className="absolute left-[20%] transform -translate-x-1/2 w-[30%] object-contain" />
+                    <Image
+                      src={logo}
+                      alt="Logo"
+                      className="absolute left-[20%] transform -translate-x-1/2 w-[30%] object-contain"
+                    />
                   </Link>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
