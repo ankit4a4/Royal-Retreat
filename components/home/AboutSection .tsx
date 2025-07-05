@@ -7,8 +7,8 @@ const AboutSection = () => {
     <section className="bg-[#fbf7f0] md:py-[14vh] py-10 px-6 md:px-[10vw]">
       <div className=" mx-auto text-center space-y-[6vh]">
         <div>
-          <h1 className="font-bold text-2xl">The palm 🌴 bliss resort Adventure in jungle</h1>
-          <h1 className="font-inter mt-1 text-gray-700">Atharva ayurvedic wellness retreat</h1>
+          <h1 className="font-bold font-inter text-gray-600 text-lg"><span className="text-xl font-bold text-black">THE PALM 🌴 BLISS RESORT</span> adventure in jungle</h1>
+          <h1 className="font-inter text-3xl font-bold mt-1 text-gray-900 capitalize">ATHARVA AYURVEDIC WELLNESS RETREAT</h1>
         </div>
 
         {/* Heading */}
@@ -18,7 +18,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-[6.3vw] md:text-[3vw] font-playfair font-bold text-[#3c2f23] leading-tight"
         >
-          Experience the Soul of shivalik ranges & lesser himalayan — <br />
+          Experience the soul of shivalik ranges & Lesser HIMALAYAN <br />
           <span className="text-[#C9A062]">
             Ayurveda, Nature & Wellness in Harmony
           </span>
@@ -33,7 +33,7 @@ const AboutSection = () => {
         >
           Nestled in the sacred foothills of the Himalayas, our retreat is more
           than a place — it’s an experience. Discover inner balance through the
-          timeless wisdom of Ayurveda, pristine nature, and soulful living.
+          timeless wisdom of Ayurveda, pristine nature and soulful living.
           Whether you're seeking physical rejuvenation, mental clarity or
           spiritual awakening, every element here is aligned to support your
           transformation.
@@ -54,18 +54,18 @@ const AboutSection = () => {
           and with peace.”
         </motion.blockquote> */}
 
-        <motion.p
+ <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-[2vh] md:text-[1.15vw] text-[#4a3b2a] leading-relaxed mx-auto"
         >
-          Founded by <strong>Ms. Shivani Agarwal</strong> & co-Founded by{" "}
-          <strong>Mr. Path Garg</strong>, and with the strategic insights of{" "}
-          <strong>Mr. Kamlesh Singh</strong>, the retreat is built on the
+          Founder <strong>Ms. Shivani Agarwal</strong>, along with co-founder{" "}
+          <strong>Mr. Path Garg</strong> and with strategic insights from{" "}
+          <strong>Mr. Kamlesh Singh</strong>, leads Atharva Ayurvedic Wellness Retreat, which is built on the
           foundations of holistic healing, conscious design, and a deep
           reverence for ancient Ayurvedic wisdom. Our vision is to create a
-          sacred space where guests not only unwind — but awaken to a higher
+          sacred space where guests not only unwind but also awaken to a higher
           state of being.
         </motion.p>
       </div>
