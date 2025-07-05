@@ -7,10 +7,7 @@ import BlurText from "../ui/BlurText";
 import RotatingText from "../ui/RotatingText";
 
 // Removed TypeScript type definition for props
-const HeroSection = ({
-  welcomeHeading,
-  subtitle = "The Palm Bliss",
-}) => {
+const HeroSection = ({ welcomeHeading, subtitle = "The Palm Bliss" }) => {
   const [showMobileForm, setShowMobileForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -67,21 +64,23 @@ const HeroSection = ({
         >
           {welcomeHeading}
         </motion.h1>
-
-        <div className="flex justify-center items-center">
+        <h1 className="text-white text-xl">To</h1>
+        <div className="flex flex-col justify-center mb-2 items-center">
           <BlurText
             text="The Palm Bliss"
             delay={150}
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-3xl mb-2 text-white font-playfair tracking-widest"
+            className="text-3xl text-white font-playfair tracking-widest"
           />
+          <h1 className="text-gray-200 font-inter">Adventure in jungle</h1>
         </div>
+
         <RotatingText
           texts={[
             "Atharva Ayurvedic",
-            "Boutique Wellness Retreat",
+            "Wellness Retreat",
             "Where Healing Begins Within",
           ]}
           mainClassName="px-2 sm:px-2 md:px-3 bg-yellow-600/20 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
